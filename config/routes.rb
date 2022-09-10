@@ -8,5 +8,7 @@ Rails.application.routes.draw do
   get "/me", to: "users#show"
   # Login after sign-up
   post "/login", to: "sessions#create"
+  # Logout after login
+  delete "/logout", to: "sessions#destroy"
 
 end
