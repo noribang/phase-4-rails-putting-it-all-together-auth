@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   post "/signup", to: "users#create"
   # Auto-Login feature
   get "/me", to: "users#show"
+  # Login after sign-up
+  post "/login", to: "sessions#create"
 
 end
