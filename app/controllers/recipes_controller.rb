@@ -1,9 +1,11 @@
 class RecipesController < ApplicationController
 
+    # Recipe list.
     def index
         render json: Recipe.all
     end
 
+    # Recipe creation.
     def create
         recipe = @current_user.recipes.create!(recipe_params)
         render json: recipe, status: :created
